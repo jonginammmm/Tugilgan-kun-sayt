@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy 17th Birthday! 💖</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #2a0845, #5b1147, #1e1b4b);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: #fff;
+            padding: 20px 10px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .iphone-frame {
+            max-width: 650px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(35px);
+            -webkit-backdrop-filter: blur(35px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 35px;
+            padding: 25px 20px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            position: relative;
+        }
+
+        .dynamic-island {
+            width: 160px;
+            height: 32px;
+            background: #000;
+            border-radius: 20px;
+            margin: 0 auto 5px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dynamic-island:hover {
+            width: 220px;
+            height: 40px;
+        }
+
+        .island-content {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            color: #ff375f;
+            font-weight: 600;
+        }
+
+        .island-dot {
+            width: 8px;
+            height: 8px;
+            background: #30d158;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        .hero-header {
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 38px;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            background: linear-gradient(180deg, #ffffff, #f472b6, #ff2d55);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 10px 20px rgba(244, 114, 182, 0.3);
+        }
+
+        .age-badge {
+            display: inline-block;
+            background: rgba(255, 45, 85, 0.25);
+            border: 1.5px solid #ff2d55;
+            padding: 8px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 800;
+            color: #ff375f;
+            box-shadow: 0 4px 15px rgba(255, 45, 85, 0.3);
+        }
+
+        .widget {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .widget-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #ff375f;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .music-widget {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 55, 95, 0.35);
+        }
+
+        .music-info {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .album-art {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #ff2d55, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 4px 15px rgba(255, 45, 85, 0.4);
+        }
+
+        .music-details h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .music-details p {
+            font-size: 12px;
+            color: #cbd5e1;
+            margin-top: 2px;
+        }
+
+        audio {
+            width: 100%;
+            height: 38px;
+            border-radius: 12px;
+            outline: none;
+        }
+
+        .long-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #f1f5f9;
+            text-align: justify;
+        }
+
+        .poem-box {
+            background: rgba(255, 45, 85, 0.15);
+            border-left: 4px solid #ff2d55;
+            padding: 16px;
+            border-radius: 0 20px 20px 0;
+            font-style: italic;
+            line-height: 1.9;
+            font-size: 15px;
+            color: #ffe4e6;
+            margin-top: 14px;
+        }
+
+        .quiz-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 18px;
+            padding: 16px;
+            margin-bottom: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .quiz-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .quiz-q {
+            font-size: 15px;
+            font-weight: 700;
+            color: #f472b6;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .quiz-input {
+            width: 100%;
+            height: 70px;
+            padding: 12px;
+            border-radius: 14px;
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            resize: none;
+            transition: border-color 0.3s;
+        }
+
+        .quiz-input:focus {
+            border-color: #ff2d55;
+        }
+
+        .game-area {
+            position: relative;
+            height: 280px;
+            background: rgba(0, 0, 0, 0.45);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 45, 85, 0.25);
+        }
+
+        .heart-btn {
+            position: absolute;
+            font-size: 28px;
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.1s ease;
+            filter: drop-shadow(0 0 8px rgba(255, 45, 85, 0.8));
+        }
+
+        .heart-btn:active {
+            transform: scale(1.3);
+        }
+
+        .game-status {
+            font-size: 13px;
+            color: #ff7597;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .game-message {
+            background: rgba(255, 45, 85, 0.2);
+            border: 1px solid #ff2d55;
+            padding: 12px;
+            border-radius: 14px;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            margin-top: 10px;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .memory-box {
+            background: linear-gradient(135deg, rgba(255, 45, 85, 0.2), rgba(139, 92, 246, 0.2));
+            border: 1.5px solid rgba(255, 45, 85, 0.4);
+            border-radius: 22px;
+            padding: 18px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .memory-title {
+            font-size: 17px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .date-badge {
+            display: inline-block;
+            background: #ff2d55;
+            color: #fff;
+            padding: 4px 14px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .math-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .math-card {
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 12px 8px;
+            text-align: center;
+        }
+
+        .math-val {
+            font-size: 20px;
+            font-weight: 900;
+            color: #f472b6;
+        }
+
+        .math-lbl {
+            font-size: 11px;
+            color: #cbd5e1;
+            margin-top: 2px;
+            font-weight: 600;
+        }
+
+        .math-full {
+            grid-column: span 2;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 45, 85, 0.3);
+        }
+
+        .math-timer {
+            font-size: 16px;
+            font-weight: 800;
+            color: #38bdf8;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .days-breakdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            margin-top: 10px;
+        }
+
+        .day-box {
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 8px 4px;
+            text-align: center;
+        }
+
+        .day-num {
+            font-size: 14px;
+            font-weight: 800;
+            color: #f472b6;
+        }
+
+        .day-name {
+            font-size: 10px;
+            color: #94a3b8;
+        }
+
+        .main-send-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #ff2d55, #d946ef);
+            color: #fff;
+            border: none;
+            padding: 16px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            box-shadow: 0 6px 25px rgba(255, 45, 85, 0.5);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .main-send-btn:active {
+            transform: scale(0.97);
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(15px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            padding: 20px;
+        }
+
+        .modal-box {
+            background: rgba(30, 27, 75, 0.95);
+            border: 1.5px solid rgba(255, 45, 85, 0.4);
+            border-radius: 30px;
+            padding: 25px;
+            max-width: 360px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .modal-desc {
+            font-size: 14px;
+            color: #cbd5e1;
+            margin-bottom: 22px;
+            line-height: 1.5;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .modal-btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 16px;
+            font-size: 15px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .modal-btn:active {
+            transform: scale(0.95);
+        }
+
+        .btn-yes {
+            background: linear-gradient(135deg, #ff2d55, #ec4899);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255, 45, 85, 0.4);
+        }
+
+        .btn-no {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .home-bar {
+            width: 130px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
+            margin: 10px auto 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="iphone-frame">
+
+        <div class="dynamic-island">
+            <div class="island-content">
+                <div class="island-dot"></div>
+                <span>17th Birthday</span>
+            </div>
+            <span style="font-size: 12px;">❤️</span>
+        </div>
+
+        <div class="hero-header">
+            <h1 class="hero-title">TUG'ILGAN KUNING BILAN!</h1>
+            <div class="age-badge">✨ 17 YOSH – SHIRIN ORZULAR YOSHI ✨</div>
+        </div>
+
+        <div class="widget music-widget">
+            <div class="music-info">
+                <div class="album-art">🎵</div>
+                <div class="music-details">
+                    <h4>Lovely Story (Romantic Theme)</h4>
+                    <p>Faqat sen uchun ijro etilmoqda...</p>
+                </div>
+            </div>
+            <audio id="bg-audio" controls autoplay loop>
+                <source src="lovely-story.mp3" type="audio/mpeg">
+                Brauzeringiz audioni qo'llab-quvvatlamaydi.
+            </audio>
+        </div>
+
+        <div class="widget">
+            <div class="widget-title">💖 Samimiy va Beg'ubor Tabriknoma</div>
+            <p class="long-text">
+                Bugun sen hayotingdagi eng go'zal, beg'ubor va orzularga boy bo'lgan **17 yoshni** qarshilamoqdasan! Bu yosh – qalbingdagi eng ezgu tilaklar qanot qoqadigan, kelajaging poydevori mustahkam quriladigan muqaddas va takrorlanmas davr.
+            </p>
+            <br>
+            <p class="long-text">
+                Hayotimga kirib kelganingdan beri har bir kunim yangicha ma'no, qalbim esa cheksiz quvonchga to'ldi. Sening samimiy kulging, beg'ubor va mehrli qalbing men uchun bu dunyodagi eng katta boylikdir. Yoningda bo'lish, har bir g'oyang va orzuingni qo'llab-quvvatlash men uchun chinakam sharaf! Yuzingdan tabassum, qalbingdan esa baxt va xotirjamlik hech qachon arimasin. 17 yoshing qutlug' bo'lsin, mening eng qimmatli insonim! ❤️
+            </p>
+
+            <div class="poem-box">
+                O'n yetti yosh – qalbning eng toza fali,<br>
+                Sen mening umrimning eng shirin g'ali.<br>
+                Sening tabassuming dunyoga tatir,<br>
+                Baxtimiz yo'llari bo'lsin nurli, muattar! ✨
+            </div>
+        </div>
+
+        <div class="widget">
+            <div class="widget-title">❓ Kelajak va Tug'ilgan Kunga Bag'ishlangan 5 Maxsus Savol</div>
+            <p style="font-size: 13px; color: #cbd5e1; margin-bottom: 14px; line-height: 1.4;">
+                Har bir savolga o'zingning samimiy javobingni yozib qoldir, ular men uchun juda qadrli! ✨
+            </p>
+
+            <div class="quiz-card">
+                <div class="quiz-q">1. Bugungi 17 yoshingda ko'nglingdan kechgan eng birinchi va eng katta niyat/orzuing nima bo'ldi?</div>
+                <textarea id="q1" class="quiz-input" placeholder="Javobingizni shu yerga yozing..."></textarea>
+            </div>
+
+            <div class="quiz-card">
+                <div class="quiz-q">2. Seningcha, kelajakda birga erishmoqchi bo'lgan eng katta maqsadimiz yoki orzuimiz nima?</div>
+                <textarea id="q2" class="quiz-input" placeholder="Javobingizni shu yerga yozing..."></textarea>
+            </div>
+
+            <div class="quiz-card">
+                <div class="quiz-q">3. Hayotingdagi eng baxtli kun deb qaysi lahzani eslaysan va kelajakda qanday kunlarni kutayapsan?</div>
+                <textarea id="q3" class="quiz-input" placeholder="Javobingizni shu yerga yozing..."></textarea>
+            </div>
+
+            <div class="quiz-card">
+                <div class="quiz-q">4. Bir necha yildan keyingi o'zingni va bizning munosabatlarimizni qanday tasavvur qilasan?</div>
+                <textarea id="q4" class="quiz-input" placeholder="Javobingizni shu yerga yozing..."></textarea>
+            </div>
+
+            <div class="quiz-card">
+                <div class="quiz-q">5. Ushbu 17 yoshingga atab tayyorlangan syurpriz sayt senga qanchalik manzur bo'ldi va qanday hissiyot berdi?</div>
+                <textarea id="q5" class="quiz-input" placeholder="O'z taassurotlaringni yozing..."></textarea>
+            </div>
+        </div>
+
+        <div class="widget">
+            <div class="widget-title">🎈 Interaktiv Mini O'yin: Uchar Yuraklar</div>
+            <div class="game-status" id="game-status-text">Osmondagi 15 ta tezkor yurakchani ushlang! (Qolgani: 15)</div>
+            
+            <div class="game-area" id="game-area"></div>
+
+            <div class="game-message" id="game-message">
+                Yurakchalardan birini bosing va shirin so'zni oling! 💕
+            </div>
+        </div>
+
+        <div class="widget">
+            <div class="memory-box">
+                <div class="date-badge">📅 UNUTILMAS SANA</div>
+                <div class="memory-title">Esingdami, sen bilan 16-may kuni tanishganimiz? 💖</div>
+                <p style="font-size: 13px; color: #fbcfe8;">O'sha shirin va go'zal kundan boshlab hozirgi kungacha har bir soniyamiz hisoblab borilmoqda:</p>
+            </div>
+
+            <div class="widget-title" style="font-size: 16px;">🧮 Matematik Hisob-Kitob va Taymer</div>
+
+            <div class="math-grid">
+                <div class="math-card">
+                    <div class="math-val" id="cnt-days">0</div>
+                    <div class="math-lbl">Jami Utgan Kunlar</div>
+                </div>
+                <div class="math-card">
+                    <div class="math-val" id="cnt-weeks">0</div>
+                    <div class="math-lbl">Jami Utgan Haftalar</div>
+                </div>
+                <div class="math-card">
+                    <div class="math-val" id="cnt-hours">0</div>
+                    <div class="math-lbl">Jami Utgan Soatlar</div>
+                </div>
+                <div class="math-card">
+                    <div class="math-val" id="cnt-mins">0</div>
+                    <div class="math-lbl">Jami Utgan Daqiqalar</div>
+                </div>
+                <div class="math-card math-full">
+                    <div class="math-lbl">Jonli Vaqt (24/7 Avto-Hisoblagich)</div>
+                    <div class="math-timer" id="live-timer">0 kun 00:00:00</div>
+                </div>
+            </div>
+
+            <p style="font-size: 13px; color: #f472b6; font-weight: 700; margin-top: 15px; text-align: center;">
+                📊 Haftaning Har Bir Kuni Necha Martadan O'tdi:
+            </p>
+            <div class="days-breakdown">
+                <div class="day-box"><div class="day-num" id="d-mon">0</div><div class="day-name">Dushanbe</div></div>
+                <div class="day-box"><div class="day-num" id="d-tue">0</div><div class="day-name">Seshanba</div></div>
+                <div class="day-box"><div class="day-num" id="d-wed">0</div><div class="day-name">Chorshanba</div></div>
+                <div class="day-box"><div class="day-num" id="d-thu">0</div><div class="day-name">Payshanba</div></div>
+                <div class="day-box"><div class="day-num" id="d-fri">0</div><div class="day-name">Juma</div></div>
+                <div class="day-box"><div class="day-num" id="d-sat">0</div><div class="day-name">Shanba</div></div>
+                <div class="day-box" style="grid-column: span 2;"><div class="day-num" id="d-sun">0</div><div class="day-name">Yakshanba</div></div>
+            </div>
+        </div>
+
+        <div class="widget" style="text-align: center;">
+            <div class="widget-title" style="justify-content: center;">💌 Javoblarni Yuborish</div>
+            <p style="font-size: 13px; color: #cbd5e1; margin-bottom: 15px;">
+                Barcha 5 ta savolga yozgan javoblaringni va tilaklaringni Oybekka jo'natish uchun quyidagi tugmani bosing!
+            </p>
+            <button class="main-send-btn" onclick="openConfirmModal()">Javoblarni Oybekka Jo'natish 💌</button>
+        </div>
+
+        <div class="home-bar"></div>
+
+        <footer>
+            iOS 18 Pro Max • Security Protected System 🛡️<br>
+            2026-yil 16-Maydan Abadiyatga... ❤️
+        </footer>
+
+    </div>
+
+    <div class="modal-overlay" id="confirmModal">
+        <div class="modal-box">
+            <div class="modal-title">Javoblarni Yuborasizmi? 💖</div>
+            <div class="modal-desc">
+                Siz yozgan barcha javoblar va dil izhorlaringiz Oybekka to'g'ridan-to'g'ri Telegram orqali yuboriladi. Rozimisiz?
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-btn btn-yes" onclick="confirmSend(true)">HA 💌</button>
+                <button class="modal-btn btn-no" onclick="confirmSend(false)">YO'Q ❌</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('click', function() {
+            const audio = document.getElementById('bg-audio');
+            if(audio && audio.paused) {
+                audio.play().catch(e => console.log("Audio auto-play blocked"));
+            }
+        }, { once: true });
+
+        const sweetWords = [
+            "Siz dunyodagi eng go'zal insonsiz! ✨",
+            "Sening tabassuming har qanday zulmatni yoritadi! 🌹",
+            "Seni uchratganim – hayotimdagi eng katta baxt! ❤️",
+            "Har bir kunda sen bilan bo'lishni xohlayman! 🏡",
+            "Yuzingdan hech qachon tabassum arimasin! 🌸",
+            "Sen mening eng shirin orzuimsan! 💫",
+            "Qalbing doimo baxt va mehrga to'lsin! 💖",
+            "Sening samimiyliging meni hayratda qoldiradi! 🌷",
+            "Sen bilan har bir daqiqa unutilmas! ⏰",
+            "Dunyo sen bilan chiroyliroq va ma'noli! 🌍",
+            "Eng ezgu orzularing hammasi ushalsin! 🌟",
+            "17 yoshing senga cheksiz quvonch keltirsin! 🎁",
+            "Sen har doim mening birinchi raqamli qahramonimsan! 👑",
+            "Har doim yoningda bo'lish – mening eng katta niyatim! 🥰",
+            "Seni jonimdan ham ortiq yaxshi ko'raman! 💖"
+        ];
+
+        let totalHearts = 15;
+        let heartsLeft = 15;
+        const gameArea = document.getElementById('game-area');
+        const gameStatus = document.getElementById('game-status-text');
+        const gameMsg = document.getElementById('game-message');
+        const heartElements = [];
+
+        function initHeartsGame() {
+            gameArea.innerHTML = '';
+            for(let i = 0; i < totalHearts; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart-btn';
+                heart.innerHTML = '💖';
+                
+                let posX = Math.random() * (gameArea.clientWidth - 40);
+                let posY = Math.random() * (gameArea.clientHeight - 40);
+                
+                let speedX = (Math.random() - 0.5) * 6;
+                let speedY = (Math.random() - 0.5) * 6;
+                
+                heart.style.left = posX + 'px';
+                heart.style.top = posY + 'px';
+
+                const heartObj = {
+                    element: heart,
+                    x: posX,
+                    y: posY,
+                    vx: speedX,
+                    vy: speedY,
+                    text: sweetWords[i % sweetWords.length],
+                    active: true
+                };
+
+                heart.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if(heartObj.active) {
+                        heartObj.active = false;
+                        heart.style.display = 'none';
+                        heartsLeft--;
+                        
+                        gameMsg.innerText = heartObj.text;
+
+                        if(heartsLeft > 0) {
+                            gameStatus.innerText = `Osmondagi yuraklar kamaymoqda! (Qolgani: ${heartsLeft})`;
+                        } else {
+                            gameStatus.innerText = "🎉 Barcha yuraklarni ushladingiz! Barcha shirin so'zlar siz uchun!";
+                        }
+                    }
+                });
+
+                gameArea.appendChild(heart);
+                heartElements.push(heartObj);
+            }
+
+            function animateHearts() {
+                const areaWidth = gameArea.clientWidth - 35;
+                const areaHeight = gameArea.clientHeight - 35;
+
+                heartElements.forEach(h => {
+                    if(h.active) {
+                        h.x += h.vx;
+                        h.y += h.vy;
+
+                        if(h.x <= 0 || h.x >= areaWidth) h.vx *= -1;
+                        if(h.y <= 0 || h.y >= areaHeight) h.vy *= -1;
+
+                        h.x = Math.max(0, Math.min(h.x, areaWidth));
+                        h.y = Math.max(0, Math.min(h.y, areaHeight));
+
+                        h.element.style.left = h.x + 'px';
+                        h.element.style.top = h.y + 'px';
+                    }
+                });
+                requestAnimationFrame(animateHearts);
+            }
+            animateHearts();
+        }
+
+        setTimeout(initHeartsGame, 300);
+
+        // 16-May 2026 yildan boshlab jonli va aniq hisoblash
+        const startDate = new Date('2026-05-16T00:00:00');
+
+        function updateMathCounters() {
+            const now = new Date();
+            const diffTime = now.getTime() - startDate.getTime();
+
+            if (diffTime < 0) {
+                // Agar 16-may sanasi hali kelmagan bo'lsa
+                document.getElementById('cnt-days').innerText = "0";
+                document.getElementById('cnt-weeks').innerText = "0";
+                document.getElementById('cnt-hours').innerText = "0";
+                document.getElementById('cnt-mins').innerText = "0";
+                document.getElementById('live-timer').innerText = "16-may kutilmoqda...";
+                return;
+            }
+
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const diffWeeks = (diffDays / 7).toFixed(1);
+            const diffHours = Math.floor(diffTime / (1000 * 60 * 60));
+            const diffMins = Math.floor(diffTime / (1000 * 60));
+
+            document.getElementById('cnt-days').innerText = diffDays.toLocaleString();
+            document.getElementById('cnt-weeks').innerText = diffWeeks;
+            document.getElementById('cnt-hours').innerText = diffHours.toLocaleString();
+            document.getElementById('cnt-mins').innerText = diffMins.toLocaleString();
+
+            const hrsRem = Math.floor((diffTime / (1000 * 60 * 60)) % 24);
+            const minsRem = Math.floor((diffTime / (1000 * 60)) % 60);
+            const secsRem = Math.floor((diffTime / 1000) % 60);
+
+            const formatPad = (num) => String(num).padStart(2, '0');
+            document.getElementById('live-timer').innerText = 
+                `${diffDays} kun ${formatPad(hrsRem)}:${formatPad(minsRem)}:${formatPad(secsRem)}`;
+
+            // Kunlar taqsimoti
+            let counts = [0, 0, 0, 0, 0, 0, 0];
+            let curr = new Date(startDate.getTime());
+
+            while (curr <= now) {
+                let dayIdx = curr.getDay();
+                let mappedIdx = (dayIdx === 0) ? 6 : dayIdx - 1;
+                counts[mappedIdx]++;
+                curr.setDate(curr.getDate() + 1);
+            }
+
+            document.getElementById('d-mon').innerText = counts[0];
+            document.getElementById('d-tue').innerText = counts[1];
+            document.getElementById('d-wed').innerText = counts[2];
+            document.getElementById('d-thu').innerText = counts[3];
+            document.getElementById('d-fri').innerText = counts[4];
+            document.getElementById('d-sat').innerText = counts[5];
+            document.getElementById('d-sun').innerText = counts[6];
+        }
+
+        setInterval(updateMathCounters, 1000);
+        updateMathCounters();
+
+        function openConfirmModal() {
+            const q1 = document.getElementById('q1').value.trim();
+            const q2 = document.getElementById('q2').value.trim();
+            const q3 = document.getElementById('q3').value.trim();
+            const q4 = document.getElementById('q4').value.trim();
+            const q5 = document.getElementById('q5').value.trim();
+
+            if (!q1 && !q2 && !q3 && !q4 && !q5) {
+                alert("Iltimos, avval savollardan kamida biriga javob yozing!");
+                return;
+            }
+
+            document.getElementById('confirmModal').style.display = 'flex';
+        }
+
+        function confirmSend(isConfirmed) {
+            document.getElementById('confirmModal').style.display = 'none';
+            if (isConfirmed) {
+                const q1 = document.getElementById('q1').value.trim() || "Javob berilmadi";
+                const q2 = document.getElementById('q2').value.trim() || "Javob berilmadi";
+                const q3 = document.getElementById('q3').value.trim() || "Javob berilmadi";
+                const q4 = document.getElementById('q4').value.trim() || "Javob berilmadi";
+                const q5 = document.getElementById('q5').value.trim() || "Javob berilmadi";
+
+                const messageText = 
+                    `💖 17 yosh tug'ilgan kun saytidan javoblar:\n\n` +
+                    `1️⃣ First Wish: ${q1}\n` +
+                    `2️⃣ Future Goal: ${q2}\n` +
+                    `3️⃣ Best Moment: ${q3}\n` +
+                    `4️⃣ Future Us: ${q4}\n` +
+                    `5️⃣ Impression: ${q5}`;
+
+                const username = "oybekortiqboyevv";
+                window.open(`https://t.me/${username}?text=${encodeURIComponent(messageText)}`, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
